@@ -1,12 +1,10 @@
 package com.example.messagingstompwebsocket;
 
-//Class to model the message that carries the name
 public class HelloMessage {
 
     private String name;
 
     public HelloMessage() {
-
     }
 
     public HelloMessage(String name) {
@@ -20,5 +18,4 @@ public class HelloMessage {
     public void setName(String name) {
         this.name = name;
     }
-
 }

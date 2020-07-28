@@ -12,15 +12,6 @@ function setConnected(connected) {
     $("#greetings").html("");
 }
 
-/*
-The connect() function uses SockJS and stomp.js to open a connection to /gs-guide-websocket, which is where our SockJS
-server waits for connections. Upon a successful connection, the client subscribes to the /topic/greetings destination,
-where the server will publish greeting messages. When a greeting is received on that destination, it will append a
-paragraph element to the DOM to display the greeting message.
-
-The sendName() function retrieves the name entered by the user and uses the STOMP client to send it to the /app/hello
-destination (where GreetingController.greeting() will receive it).
-*/
 function connect() {
     var socket = new SockJS('/gs-guide-websocket');
     stompClient = Stomp.over(socket);
